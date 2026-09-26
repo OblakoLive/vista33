@@ -190,12 +190,13 @@ html[data-theme="day"] .btn--light:hover{background:transparent;color:var(--day-
 /* при прокрутке вниз шапка уезжает вместе со страницей 1:1 (transform задаёт скрипт), а при прокрутке
    вверх плавно выезжает обратно — эта анимация включается классом nav--reveal только на момент появления */
 .nav.nav--reveal{transition:background .4s, color var(--theme-transition), transform .45s cubic-bezier(.2,.7,.2,1)}
-/* подложка шапки: вместо резкой нижней линии — растворение в прозрачность. Фон и размытие живут на
-   псевдоэлементе, который выступает на 40px ниже шапки и гаснет маской к низу */
+/* подложка шапки: вместо резких верхней и нижней линий — растворение в прозрачность с обеих сторон,
+   плашка выглядит плавающей стеклянной панелью. Фон и размытие живут на псевдоэлементе, который
+   выступает на 40px ниже шапки и гаснет маской и сверху (от самого края экрана), и снизу */
 .nav::before{content:"";position:absolute;left:0;right:0;top:0;bottom:-40px;z-index:-1;pointer-events:none;
   background:rgba(18,18,18,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
-  -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 60px),transparent 100%);
-  mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 60px),transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 60px),transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 60px),transparent 100%);
   opacity:0;transition:opacity .4s, background-color var(--theme-transition)}
 .nav.scrolled::before{opacity:1}
 .nav.open::before{opacity:0}
