@@ -48,7 +48,14 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Oswald:wght@300;500;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- шрифты грузим не блокируя отрисовку страницы: если fonts.googleapis.com у части
+     провайдеров отвечает медленно или зависает, сайт всё равно сразу показывается
+     системным шрифтом, а не «висит» в ожидании. media="print" делает ссылку
+     неблокирующей, onload переключает её на все медиа, когда (и если) CSS придёт;
+     noscript — подстраховка для случая без JS. -->
+<link rel="stylesheet" media="print" onload="this.media='all'"
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Oswald:wght@300;500;700&family=Manrope:wght@300;400;500;600&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Oswald:wght@300;500;700&family=Manrope:wght@300;400;500;600&display=swap"></noscript>
 <style>
 :root{
   /* ===== токены темы «Ночь» — эталон, значения совпадают с изначальным дизайном ===== */
