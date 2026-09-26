@@ -186,12 +186,23 @@ html[data-theme="day"] .btn--light:hover{background:transparent;color:var(--day-
 .link-arrow:hover{opacity:.6}
 
 /* ---------- шапка ---------- */
-.nav{position:fixed;top:0;left:0;right:0;z-index:50;color:var(--paper);transition:background .4s, backdrop-filter .4s, color var(--theme-transition)}
-.nav.scrolled{background:rgba(18,18,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;color:var(--paper);transition:background .4s, color var(--theme-transition);will-change:transform}
+/* при прокрутке вниз шапка уезжает вместе со страницей 1:1 (transform задаёт скрипт), а при прокрутке
+   вверх плавно выезжает обратно — эта анимация включается классом nav--reveal только на момент появления */
+.nav.nav--reveal{transition:background .4s, color var(--theme-transition), transform .45s cubic-bezier(.2,.7,.2,1)}
+/* подложка шапки: вместо резкой нижней линии — растворение в прозрачность. Фон и размытие живут на
+   псевдоэлементе, который выступает на 40px ниже шапки и гаснет маской к низу */
+.nav::before{content:"";position:absolute;left:0;right:0;top:0;bottom:-40px;z-index:-1;pointer-events:none;
+  background:rgba(18,18,18,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 60px),transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 60px),transparent 100%);
+  opacity:0;transition:opacity .4s, background-color var(--theme-transition)}
+.nav.scrolled::before{opacity:1}
+.nav.open::before{opacity:0}
 /* «День»: шапка всегда светлая. «Микс»: тон шапки выставляет скрипт (data-tone="dark|light" на
    #nav) по секции, которая сейчас находится под ней — см. updateNavTone() в конце файла. */
 html[data-theme="day"] .nav,.nav[data-tone="light"]{color:var(--day-text)}
-html[data-theme="day"] .nav.scrolled,.nav[data-tone="light"].scrolled{background:rgba(243,238,230,.86);border-bottom-color:var(--day-line)}
+html[data-theme="day"] .nav::before,.nav[data-tone="light"]::before{background:rgba(243,238,230,.86)}
 html[data-theme="day"] .logo__mark,.nav[data-tone="light"] .logo__mark{filter:invert(1) drop-shadow(0 2px 4px rgba(0,0,0,.18))}
 html[data-theme="day"] .nav__call,.nav[data-tone="light"] .nav__call{border-color:var(--day-line);color:var(--day-text)}
 html[data-theme="day"] .nav__call:hover,.nav[data-tone="light"] .nav__call:hover{background:var(--day-text);color:var(--day-bg)}
@@ -1054,12 +1065,36 @@ applyTheme(document.documentElement.getAttribute('data-theme') || 'night');
 
 // шапка: фон при прокрутке и мобильное меню
 const scrollHint = document.getElementById('scrollHint');
+// прячущаяся шапка: вниз — уезжает вместе со страницей (сдвиг = пройденному расстоянию, без анимации),
+// вверх — сразу плавно выезжает целиком. Порог в 8px отсекает дрожание пальца и «резинку» iOS.
+let lastY = Math.max(0, scrollY), navShift = 0, upAcc = 0;
+function setNavShift(v, animate) {
+  navShift = v;
+  nav.classList.toggle('nav--reveal', !!animate);
+  nav.style.transform = v ? `translateY(${-v}px)` : '';
+}
+function showNav() { upAcc = 0; if (navShift) setNavShift(0, true); }
 addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', scrollY > 40);
-  if (scrollHint) scrollHint.classList.toggle('is-hidden', scrollY > 40);
+  const maxY = document.documentElement.scrollHeight - innerHeight;
+  const y = Math.min(Math.max(0, scrollY), maxY);
+  const d = y - lastY;
+  lastY = y;
+  nav.classList.toggle('scrolled', y > 40);
+  if (scrollHint) scrollHint.classList.toggle('is-hidden', y > 40);
+  if (nav.classList.contains('open')) {
+    showNav();
+  } else if (d > 0) {
+    upAcc = 0;
+    const hideBy = nav.offsetHeight + 40; // + зона растворения под шапкой
+    if (navShift < hideBy) setNavShift(Math.min(hideBy, navShift + d), false);
+  } else if (d < 0) {
+    upAcc -= d;
+    if (upAcc > 8 || y <= 0) showNav();
+  }
   updateNavTone();
 }, {passive:true});
-document.getElementById('burger').onclick = () => nav.classList.toggle('open');
+nav.addEventListener('focusin', showNav); // клавиатурная навигация: шапка не должна прятать фокус
+document.getElementById('burger').onclick = () => { nav.classList.toggle('open'); showNav(); };
 document.querySelectorAll('#menu a').forEach(a => a.onclick = () => nav.classList.remove('open'));
 
 // появление блоков при прокрутке
