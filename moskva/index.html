@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ВиСтА — ателье индивидуального пошива в Коврове</title>
-<meta name="description" content="Ателье стиля ВиСтА в Коврове: индивидуальный пошив платьев, корсетов и костюмов, свадебные и выпускные платья, аренда нарядов, ремонт и подгонка одежды. С 2018 года.">
-<meta property="og:title" content="ВиСтА — ателье индивидуального пошива в Коврове">
-<meta property="og:description" content="Индивидуальный пошив, корсеты, свадебные и выпускные платья, аренда нарядов, ремонт и подгонка одежды. Ковров, ул. Брюсова, 25.">
+<title>Пошив платьев для Москвы по ценам Коврова — ателье ВиСтА</title>
+<meta name="description" content="Индивидуальный пошив свадебных и выпускных платьев, корсетов и костюмов для москвичей по ценам ателье в Коврове. Мерки по видеосвязи или примерка в Коврове, отправка готовой вещи доставкой.">
+<meta property="og:title" content="Пошив платьев для Москвы по ценам Коврова — ателье ВиСтА">
+<meta property="og:description" content="Индивидуальный пошив свадебных и выпускных платьев, корсетов и костюмов для москвичей по ценам ателье в Коврове. Мерки по видеосвязи или примерка в Коврове, отправка готовой вещи доставкой.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:image" content="https://vista33.ru/img/logo-mono.png">
-<meta property="og:url" content="https://vista33.ru/">
-<link rel="canonical" href="https://vista33.ru/">
-<link rel="icon" href="img/logo.jpg">
+<meta property="og:url" content="https://vista33.ru/moskva/">
+<link rel="canonical" href="https://vista33.ru/moskva/">
+<link rel="icon" href="/img/logo.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -20,7 +20,8 @@
   "name": "Ателье стиля ВиСтА",
   "image": "https://vista33.ru/img/logo-mono.png",
   "telephone": "+79100959623",
-  "url": "https://vista33.ru/",
+  "url": "https://vista33.ru/moskva/",
+  "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "City", "name": "Ковров"}],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "ул. Брюсова, 25",
@@ -560,6 +561,14 @@ section[id],.hero{scroll-margin-top:86px}
   .tier{min-height:0}
   .marquee__track span{font-size:22px}
 }
+/* страница /moskva/ */
+.mv-opts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mv-opt{border:1px solid var(--line-dark);border-radius:10px;padding:34px 30px}
+html[data-theme="night"] .mv-opt{border-color:var(--line)}
+.mv-opt h3{font-family:var(--serif);font-weight:400;font-size:30px;margin:10px 0 14px}
+.mv-opt ol{margin:0;padding-left:20px;line-height:1.7}
+.mv-note{margin-top:26px;max-width:760px;opacity:.8}
+@media (max-width:860px){.mv-opts{grid-template-columns:1fr}}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -580,15 +589,14 @@ section[id],.hero{scroll-margin-top:86px}
 <!-- ============ ШАПКА ============ -->
 <header class="nav" id="nav">
   <div class="wrap nav__in">
-    <a href="#top" class="logo" aria-label="ВиСтА — на главную"><img class="logo__mark" src="img/logo-mono.webp" width="160" height="160" alt="">ВиСтА</a>
+    <a href="/" class="logo" aria-label="ВиСтА — на главную"><img class="logo__mark" src="/img/logo-mono.webp" width="160" height="160" alt="">ВиСтА</a>
     <nav class="nav__links" id="menu">
-      <a href="#services">Услуги</a>
+      <a href="#how">Как это работает</a>
+      <a href="#services">Что шьём</a>
       <a href="#prices">Цены</a>
-      <a href="#collection">Коллекция</a>
-      <a href="#process">Как мы работаем</a>
       <a href="#reviews">Отзывы</a>
-      <a href="#contacts">Контакты</a>
-      <a href="/moskva/">Для Москвы</a>
+      <a href="#book">Записаться</a>
+      <a href="/">Ателье в Коврове</a>
       <div class="theme-switch theme-switch--mobile" role="group" aria-label="Тема оформления">
         <button type="button" class="theme-switch__btn" data-theme-btn="night" aria-pressed="true" aria-label="Тема: Ночь">
           <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M13 9.2A5.6 5.6 0 0 1 6.8 3 5.6 5.6 0 1 0 13 9.2Z"/></svg><span>Ночь</span>
@@ -626,31 +634,31 @@ section[id],.hero{scroll-margin-top:86px}
 <!-- ============ ПЕРВЫЙ ЭКРАН ============ -->
 <section class="hero" id="top" data-tone="dark">
   <div class="wrap">
-    <div class="hero__corner"><span>Ателье стиля</span><span>Ковров · с 2018</span></div>
+    <div class="hero__corner"><span>Ателье стиля</span><span>Для Москвы · цены Коврова</span></div>
     <div class="hero__grid">
       <div class="rv">
         <h1 class="hero__title">
-          Одежда,<br>сшитая
-          <span class="script">по вам</span>
-          <small>а не по размерной сетке</small>
+          Пошив для&nbsp;Москвы
+          <span class="script">по ценам</span>
+          <small>ателье в Коврове</small>
         </h1>
-        <p class="hero__lead">Индивидуальный пошив в&nbsp;Коврове: вечерние и&nbsp;свадебные платья, корсеты, костюмы и&nbsp;повседневные вещи — по&nbsp;вашим меркам, эскизу или фотографии. Мы&nbsp;ведём вас от&nbsp;первой встречи до&nbsp;последней примерки.</p>
+        <p class="hero__lead">Свадебные и&nbsp;выпускные платья, корсеты, вечерние наряды и&nbsp;костюмы по&nbsp;вашим меркам. Шьём в&nbsp;Коврове, поэтому цены ниже столичных, а&nbsp;качество то&nbsp;же, за&nbsp;которое нас хвалят в&nbsp;отзывах на&nbsp;Яндекс Картах. Мерки снимаем по&nbsp;видеосвязи или на&nbsp;примерке в&nbsp;Коврове, готовую вещь отправляем доставкой.</p>
         <div class="hero__cta">
-          <a href="#book" class="btn btn--light">Записаться на примерку</a>
-          <a href="#collection" class="link-arrow">Смотреть коллекцию →</a>
+          <a href="#book" class="btn btn--light">Обсудить заказ</a>
+          <a href="#how" class="link-arrow">Как это работает →</a>
         </div>
         <div class="hero__meta">
+          <div><b>от 15 000 ₽</b><span>индивидуальный пошив</span></div>
           <div><b>4,8</b><span>Яндекс Карты</span></div>
-          <div><b>с 2018</b><span>шьём в Коврове</span></div>
-          <div><b>42–52</b><span>размеры в аренде</span></div>
+          <div><b>с 2018</b><span>шьём на заказ</span></div>
         </div>
       </div>
       <div class="hero__visual rv">
         <div class="hero__photo">
-          <img src="img/carmen.webp" width="540" height="810" fetchpriority="high" alt="Платье «Кармен» ателье ВиСтА на подиуме">
+          <img src="/img/magnolia.webp" width="540" height="809" fetchpriority="high" alt="Свадебный комплект «Дерзкая магнолия» ателье ВиСтА">
         </div>
-        <div class="hero__tag">Платье «Кармен» · показ ВиСтА</div>
-        <div class="hero__side">Индивидуальный пошив · Корсеты · Аренда</div>
+        <div class="hero__tag">Комплект «Дерзкая магнолия» · ВиСтА</div>
+        <div class="hero__side">Свадебные платья · Корсеты · Вечерние наряды</div>
       </div>
     </div>
   </div>
@@ -661,52 +669,56 @@ section[id],.hero{scroll-margin-top:86px}
   <svg viewBox="0 0 20 32" class="scroll-hint__icon"><rect x="1" y="1" width="18" height="30" rx="9"/><circle class="scroll-hint__dot" cx="10" cy="10" r="2.4"/></svg>
 </div>
 
-<!-- ============ БЕГУЩАЯ СТРОКА ============ -->
-<div class="marquee" data-tone="dark" aria-hidden="true">
-  <div class="marquee__track">
-    <span>Индивидуальный пошив</span><span>Корсеты</span><span>Свадебные платья</span><span>Выпускные</span><span>Аренда нарядов</span><span>Ремонт и подгонка</span><span>Вышивка</span><span>Мерч</span>
-    <span>Индивидуальный пошив</span><span>Корсеты</span><span>Свадебные платья</span><span>Выпускные</span><span>Аренда нарядов</span><span>Ремонт и подгонка</span><span>Вышивка</span><span>Мерч</span>
-  </div>
-</div>
-
-<!-- ============ МАНИФЕСТ ============ -->
-<section class="section" data-tone="dark">
-  <div class="wrap manifest">
-    <div class="cross rv">
-      <div class="cross__frame">
-        <img loading="lazy" src="img/white-swan.webp" width="540" height="810" alt="Корсетное платье «Белый лебедь»">
-        <div class="cross__badge" aria-hidden="true"><img src="img/logo-mono.webp" width="160" height="160" alt=""></div>
-      </div>
-      <div class="cross__cap">между тканью и телом</div>
+<!-- ============ КАК ЭТО РАБОТАЕТ ============ -->
+<section class="section" data-tone="light" id="how">
+  <div class="wrap">
+    <div class="s-head rv">
+      <h2 class="s-title"><span class="script">К</span>ак это работает</h2>
+      <p class="s-sub">Два способа — выбирайте удобный. Можно совмещать: мерки по видео, а финальная примерка в Коврове.</p>
     </div>
-    <div class="rv">
-      <div class="eyebrow">О нас</div>
-      <div class="manifest__text" style="margin-top:26px">
-        <p>Корсет — не ограничение. Это архитектура.</p>
-        <p>Он держит не для того, чтобы сковать, а чтобы подчеркнуть. Каждая косточка идёт за вашим дыханием.</p>
-        <p>Мы шьём для тех, кто знает: хорошая вещь не меняет вас — <em>она напоминает, какая вы есть.</em></p>
-      </div>
-      <div class="manifest__sign"><span class="script">Виктория Песко</span> основательница ателье</div>
+    <div class="mv-opts">
+      <article class="mv-opt rv">
+        <div class="eyebrow">Способ 1</div>
+        <h3>Дистанционно</h3>
+        <ol>
+          <li>Созваниваемся по видео: обсуждаем идею, повод, ткань.</li>
+          <li>Присылаем инструкцию — вы снимаете мерки с нашей подсказкой в прямом эфире.</li>
+          <li>Согласуем ткань и фурнитуру по фото и видео, фиксируем цену и срок.</li>
+          <li>Шьём, показываем промежуточные этапы.</li>
+          <li>Отправляем готовую вещь доставкой в Москву.</li>
+        </ol>
+      </article>
+      <article class="mv-opt rv">
+        <div class="eyebrow">Способ 2</div>
+        <h3>С примерками в Коврове</h3>
+        <ol>
+          <li>Договариваемся о дате первой встречи.</li>
+          <li>Приезжаете в ателье: мерки, ткань, эскиз — за один визит.</li>
+          <li>Примерки назначаем так, чтобы вам пришлось приезжать как можно реже.</li>
+          <li>Забираете вещь сами или получаете доставкой.</li>
+        </ol>
+      </article>
     </div>
+    <p class="mv-note">Для корсетов и свадебных платьев советуем хотя бы одну примерку вживую — так посадка будет безупречной. Стоимость доставки считаем отдельно и называем заранее.</p>
   </div>
 </section>
 
-<!-- ============ УСЛУГИ ============ -->
-<section class="section" data-tone="light" id="services" style="padding-top:40px">
+<!-- ============ ЧТО ШЬЁМ ============ -->
+<section class="section" data-tone="light" id="services" style="padding-top:0">
   <div class="wrap">
     <div class="s-head rv">
-      <h2 class="s-title"><span class="script">У</span>слуги</h2>
-      <p class="s-sub">От подгибки брюк до пошива шубы, от купальника до эксклюзивного свадебного платья. Если это можно сшить или починить — мы возьмёмся.</p>
+      <h2 class="s-title"><span class="script">Ч</span>то шьём для Москвы</h2>
+      <p class="s-sub">Всё, для чего не нужно часто приезжать: вещи по меркам, заказы для коллективов и брендов.</p>
     </div>
     <div class="services">
-      <article class="svc rv"><div class="svc__n">01</div><h3>Индивидуальный пошив</h3><p>Платья, костюмы, юбки, брюки и верхняя одежда. По вашему эскизу, фотографии или реплике известного бренда.</p></article>
-      <article class="svc rv"><div class="svc__n">02</div><h3>Свадебные и выпускные платья</h3><p>Платье к главному дню — с примерками, подбором ткани и финальной подгонкой по фигуре.</p></article>
-      <article class="svc rv"><div class="svc__n">03</div><h3>Корсеты</h3><p>На косточках, из атласа, кружева, хлопка, джинсовой ткани и экокожи. Как самостоятельная вещь или основа платья.</p></article>
-      <article class="svc rv"><div class="svc__n">04</div><h3>Ремонт и подгонка</h3><p>Ушить, укоротить, заменить молнию, перешить шубу. Посадим купленную вещь так, будто её шили на вас.</p></article>
-      <article class="svc rv"><div class="svc__n">05</div><h3>Форма и костюмы</h3><p>Школьная, кадетская, спортивная и военная форма, сценические костюмы, спецодежда для команд и коллективов.</p></article>
-      <article class="svc rv"><div class="svc__n">06</div><h3>Вышивка и печать</h3><p>Именная вышивка, нанесение рисунка печатным способом, мерч для брендов, команд и событий.</p></article>
-      <article class="svc rv"><div class="svc__n">07</div><h3>Аренда платьев</h3><p>Корсетные, свадебные и праздничные платья для взрослых и детей. Размеры от 42 до 52.</p></article>
-      <article class="svc rv"><div class="svc__n">08</div><h3>Для дома и не только</h3><p>Шторы, чехлы, тенты на авто, термосумки. Отпаривание одежды и свадебных платьев.</p></article>
+      <article class="svc rv"><div class="svc__n">01</div><h3>Свадебные платья</h3><p>Платье к главному дню по вашему эскизу или фото — с подбором ткани и примерками.</p></article>
+      <article class="svc rv"><div class="svc__n">02</div><h3>Выпускные и вечерние</h3><p>Наряд, которого не будет больше ни у кого на выпускном или празднике.</p></article>
+      <article class="svc rv"><div class="svc__n">03</div><h3>Корсеты</h3><p>На косточках, из атласа, кружева, хлопка, джинсы и экокожи. Самостоятельная вещь или основа платья.</p></article>
+      <article class="svc rv"><div class="svc__n">04</div><h3>Индивидуальный пошив</h3><p>Платья, костюмы, юбки, брюки и верхняя одежда по вашим меркам.</p></article>
+      <article class="svc rv"><div class="svc__n">05</div><h3>Платья из коллекции</h3><p>Любая модель из нашей коллекции — в вашем цвете и размере.</p></article>
+      <article class="svc rv"><div class="svc__n">06</div><h3>Костюмы для коллективов</h3><p>Сценические костюмы, форма и спецодежда для команд, танцевальных и творческих коллективов.</p></article>
+      <article class="svc rv"><div class="svc__n">07</div><h3>Вышивка и мерч</h3><p>Именная вышивка, печать, мерч для брендов и событий. Уже шьём для начинающих брендов одежды.</p></article>
+      <article class="svc rv"><div class="svc__n">08</div><h3>Реплики</h3><p>Повторим понравившуюся вещь известного бренда по фото — точно по вашей фигуре.</p></article>
     </div>
   </div>
 </section>
@@ -716,48 +728,21 @@ section[id],.hero{scroll-margin-top:86px}
   <div class="wrap">
     <div class="s-head rv">
       <div>
-        <div class="eyebrow" style="margin-bottom:18px">Стоимость</div>
+        <div class="eyebrow" style="margin-bottom:18px">Цены Коврова</div>
         <h2 class="s-title"><span class="script">Ц</span>ены</h2>
       </div>
-      <p class="s-sub">Четыре формата — от быстрой подгонки до вещи, которой нет больше ни у кого. Точную стоимость назовём после примерки и выбора ткани.</p>
+      <p class="s-sub">Для Москвы цены те же, что в ателье в Коврове. Точную стоимость назовём после обсуждения модели и выбора ткани.</p>
     </div>
     <div class="tiers">
-      <article class="tier rv">
-        <div class="tier__name">Подгонка</div>
-        <div class="tier__kind">Ремонт и уход</div>
-        <div class="tier__price"><small>от</small>3 500 ₽</div>
-        <div class="tier__note">зависит от сложности работы</div>
-        <ul>
-          <li>Подгибка, ушивание, замена молнии</li>
-          <li>Посадка готовой вещи по фигуре</li>
-          <li>Отпаривание одежды и платьев</li>
-          <li>Ремонт верхней одежды и шуб</li>
-        </ul>
-        <a href="#book" class="btn" data-service="Ремонт и подгонка">Оставить заявку</a>
-      </article>
-      <article class="tier rv">
-        <div class="tier__name">Аренда</div>
-        <div class="tier__kind">Платье на вечер</div>
-        <div class="tier__price"><small>от</small>4 000 ₽</div>
-        <div class="tier__note">свадебные комплекты — по запросу</div>
-        <ul>
-          <li>Корсетные платья из фатина</li>
-          <li>Свадебные и праздничные наряды</li>
-          <li>Детские платья — от 2 000 ₽</li>
-          <li>Размеры от 42 до 52</li>
-        </ul>
-        <a href="#collection" class="btn">Выбрать платье</a>
-      </article>
       <article class="tier rv">
         <div class="tier__name">Коллекция</div>
         <div class="tier__kind">Готовое или повтор</div>
         <div class="tier__price"><small>от</small>8 000 ₽</div>
-        <div class="tier__note">выкуп платья из коллекции</div>
+        <div class="tier__note">модель из коллекции</div>
         <ul>
           <li>Любая модель — в вашем цвете</li>
           <li>Повтор в вашем размере</li>
           <li>Корсет и юбка — можно по отдельности</li>
-          <li>Подгонка по фигуре</li>
         </ul>
         <a href="#book" class="btn" data-service="Платье из коллекции">Обсудить модель</a>
       </article>
@@ -769,124 +754,39 @@ section[id],.hero{scroll-margin-top:86px}
         <ul>
           <li>По эскизу или фото</li>
           <li>Подбор ткани и фурнитуры</li>
-          <li>Несколько примерок</li>
+          <li>Мерки по видео или в ателье</li>
           <li>Консультация стилиста</li>
         </ul>
-        <a href="#book" class="btn btn--light" data-service="Индивидуальный пошив">Записаться</a>
+        <a href="#book" class="btn btn--light" data-service="Индивидуальный пошив">Обсудить заказ</a>
+      </article>
+      <article class="tier rv">
+        <div class="tier__name">Коллективы</div>
+        <div class="tier__kind">Костюмы и форма</div>
+        <div class="tier__price">по запросу</div>
+        <div class="tier__note">зависит от тиража и ткани</div>
+        <ul>
+          <li>Сценические костюмы</li>
+          <li>Форма для команд</li>
+          <li>Спецодежда</li>
+        </ul>
+        <a href="#book" class="btn" data-service="Форма, костюмы, мерч">Рассчитать</a>
+      </article>
+      <article class="tier rv">
+        <div class="tier__name">Бренды</div>
+        <div class="tier__kind">Вышивка и мерч</div>
+        <div class="tier__price">по запросу</div>
+        <div class="tier__note">от единичных изделий</div>
+        <ul>
+          <li>Вышивка логотипа</li>
+          <li>Печать на одежде</li>
+          <li>Пошив мини-партий</li>
+        </ul>
+        <a href="#book" class="btn" data-service="Форма, костюмы, мерч">Рассчитать</a>
       </article>
     </div>
-    <p class="price-foot">Цены указаны как ориентир и зависят от ткани, сложности модели и сроков. Окончательную стоимость фиксируем до начала работы, а если по ходу что-то меняется — сначала согласуем с вами.</p>
+    <p class="price-foot">Цены указаны как ориентир и зависят от ткани, сложности модели и сроков. Окончательную стоимость фиксируем до начала работы. Доставка оплачивается отдельно.</p>
   </div>
 </section>
-
-<!-- ============ СРОКИ ============ -->
-<section class="section" data-tone="light" id="terms" style="padding-top:0">
-  <div class="wrap">
-    <div class="s-head rv">
-      <div>
-        <div class="eyebrow" style="margin-bottom:18px">Ориентир по времени</div>
-        <h2 class="s-title"><span class="script">С</span>роки</h2>
-      </div>
-      <p class="s-sub">Через сколько дней вещь будет готова — чтобы спланировать визит и примерки заранее.</p>
-    </div>
-    <!-- данные читаются из массива TERMS в конце файла (для лёгкого редактирования) -->
-    <dl class="terms-table rv" id="termsTable"></dl>
-    <p class="price-foot">Точный срок назовём при записи и после мерок. Чем раньше вы придёте, тем спокойнее пройдут примерки.</p>
-    <div style="margin-top:30px"><a href="#book" class="btn btn--ghost">Записаться на примерку</a></div>
-  </div>
-</section>
-
-<!-- ============ КОЛЛЕКЦИЯ ============ -->
-<section class="section" data-tone="light" id="collection">
-  <div class="wrap">
-    <div class="s-head rv">
-      <div>
-        <h2 class="s-title"><span class="script">К</span>оллекция</h2>
-        <div class="eyebrow" style="margin-top:14px">Фатин · Атлас · Кружево</div>
-      </div>
-    </div>
-    <div class="looks">
-      <article class="look rv">
-        <div class="look__info">
-          <div class="look__name">Кармен</div>
-          <div class="look__desc">Атлас + фатин<br>омбре от алого к чёрному<br>размер 42–46</div>
-          <div class="look__prices"><span>аренда / покупка</span><b>3 000 ₽</b> / 12 000 ₽</div>
-          <a class="look__btn" href="#book" data-service="Платье «Кармен»">Хочу это платье</a>
-        </div>
-        <div class="look__img"><img loading="lazy" src="img/carmen.webp" width="540" height="810" alt="Платье «Кармен»"></div>
-      </article>
-      <article class="look rv">
-        <div class="look__info">
-          <div class="look__name">Ночная красавица</div>
-          <div class="look__desc">Корсет с люрексом<br>эффект чернёного серебра<br>размер 42–46</div>
-          <div class="look__prices"><span>аренда / покупка</span><b>3 000 ₽</b> / 9 000 ₽</div>
-          <a class="look__btn" href="#book" data-service="Комплект «Ночная красавица»">Хочу это платье</a>
-        </div>
-        <div class="look__img"><img loading="lazy" src="img/night-beauty.webp" width="540" height="810" alt="Комплект «Ночная красавица»"></div>
-      </article>
-      <article class="look rv">
-        <div class="look__info">
-          <div class="look__name">Дерзкая магнолия</div>
-          <div class="look__desc">Свадебный комплект<br>корсет и пышная юбка</div>
-          <div class="look__prices"><span>аренда</span><b>4 000 ₽</b></div>
-          <a class="look__btn" href="#book" data-service="Свадебный комплект «Дерзкая магнолия»">Хочу это платье</a>
-        </div>
-        <div class="look__img"><img loading="lazy" src="img/magnolia.webp" width="540" height="809" alt="Свадебный комплект «Дерзкая магнолия»"></div>
-      </article>
-      <article class="look rv">
-        <div class="look__info">
-          <div class="look__name">День и ночь</div>
-          <div class="look__desc">Хлопковый корсет в горох<br>чёрно-белый фатин<br>размер 44–46</div>
-          <div class="look__prices"><span>аренда / покупка</span><b>3 000 ₽</b> / 8 000 ₽</div>
-          <a class="look__btn" href="#book" data-service="Комплект «День и ночь»">Хочу это платье</a>
-        </div>
-        <div class="look__img"><img loading="lazy" src="img/day-night.webp" width="540" height="810" alt="Комплект «День и ночь»"></div>
-      </article>
-    </div>
-    <div class="looks-foot rv">
-      <p>Понравилась модель, но нужен другой цвет или размер? Повторим любое платье из коллекции специально для вас.</p>
-      <a class="btn btn--ghost" href="https://vk.ru/market-196755644?section=album_13" target="_blank" rel="noopener">Все платья ВКонтакте →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ КАДР С ПОКАЗА ============ -->
-<section class="runway" data-tone="dark">
-  <img loading="lazy" src="img/runway.webp" width="1080" height="721" alt="Показ коллекции ателье ВиСтА">
-  <div class="runway__txt rv">
-    <span class="script">Не по трендам.</span>
-    <h2>По вашей фигуре</h2>
-    <p>Наши платья выходили на подиум, но шьём мы не для подиума, а для вашего вечера, вашей свадьбы и вашего выпускного.</p>
-  </div>
-</section>
-
-<!-- ============ КАК МЫ РАБОТАЕМ ============ -->
-<section class="section" data-tone="light" id="process">
-  <div class="wrap">
-    <div class="s-head rv">
-      <h2 class="s-title"><span class="script">К</span>ак мы шьём</h2>
-      <p class="s-sub">Каждое тело особенное. Мы снимаем мерки, слушаем и создаём вещь, которая принадлежит только вам.</p>
-    </div>
-    <div class="steps">
-      <div class="step rv"><div class="step__n">01</div><h3>Встреча</h3><p>Обсуждаем идею, повод и бюджет. Приносите эскиз, фотографию или просто рассказывайте — поможем сформулировать.</p></div>
-      <div class="step rv"><div class="step__n">02</div><h3>Мерки и ткань</h3><p>Снимаем мерки, подбираем ткань и фурнитуру, согласовываем стоимость и срок готовности.</p></div>
-      <div class="step rv"><div class="step__n">03</div><h3>Примерки</h3><p>Шьём и примеряем — столько раз, сколько нужно, чтобы вещь села безупречно.</p></div>
-      <div class="step rv"><div class="step__n">04</div><h3>Готово</h3><p>Финальная подгонка, отпаривание — и вещь ваша. Если что-то понадобится поправить потом, мы рядом.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ЦИФРЫ (светлый фон без шва — продолжение «Как мы шьём») ============ -->
-<div class="stats-wrap" data-tone="light">
-<div class="wrap">
-  <div class="stats rv">
-    <div class="stat"><b>2018</b><span>год основания</span></div>
-    <div class="stat"><b>4,8</b><span>рейтинг на Яндекс Картах</span></div>
-    <div class="stat"><b>100+</b><span>оценок клиентов</span></div>
-    <div class="stat"><b>1 200+</b><span>подписчиков ВКонтакте</span></div>
-  </div>
-</div>
-</div>
 
 <!-- ============ ОТЗЫВЫ ============ -->
 <section class="section" data-tone="light" id="reviews">
@@ -908,23 +808,8 @@ section[id],.hero{scroll-margin-top:86px}
       </blockquote>
       <blockquote class="review rv">
         <div class="review__q">“</div>
-        <p>Школа № 22 очень благодарна за пошив кадетской формы. Качество материала, пошив, ремонт — всё в срок и на высшем уровне.</p>
-        <footer><span>Ольга К.</span><span>Кадетская форма</span></footer>
-      </blockquote>
-      <blockquote class="review rv">
-        <div class="review__q">“</div>
         <p>При примерке нам посоветовали подшить выпускное платье по фигуре — и мы прислушались. Сделали всё очень быстро, а главное — качественно.</p>
         <footer><span>Дарья Т.</span><span>Выпускное платье</span></footer>
-      </blockquote>
-      <blockquote class="review rv">
-        <div class="review__q">“</div>
-        <p>Заказала перешить две шубки в одну. Качество отличное, учли все мои пожелания, которые я высказывала на трёх примерках. Рекомендую.</p>
-        <footer><span>Наталья К.</span><span>Перешив шубы</span></footer>
-      </blockquote>
-      <blockquote class="review rv">
-        <div class="review__q">“</div>
-        <p>Выручили меня за день до свадьбы! Нашли время и выполнили мою просьбу на отлично — даже лучше, чем я ожидала.</p>
-        <footer><span>Олеся Б.</span><span>Срочная подгонка</span></footer>
       </blockquote>
     </div>
     <div class="reviews-foot rv">
@@ -939,14 +824,14 @@ section[id],.hero{scroll-margin-top:86px}
   <div class="wrap">
     <div class="book">
       <div class="rv">
-        <h2 class="s-title"><span class="script">И</span>ндивидуально</h2>
-        <p class="book__lead">Не нашли то, что искали?<br>Мы сошьём это для вас.</p>
-        <p class="book__txt">Каждое тело особенное. Мы снимаем мерки, слушаем и создаём вещь, которая будет только вашей. Индивидуальный пошив и консультация стилиста — по предварительной записи.</p>
+        <h2 class="s-title"><span class="script">О</span>бсудить заказ</h2>
+        <p class="book__lead">Расскажите об идее —<br>предложим, как сшить.</p>
+        <p class="book__txt">Оставьте заявку или напишите в MAX. Договоримся о видеозвонке или о дате визита в ателье, подберём ткань и назовём цену до начала работы.</p>
         <div style="margin-top:34px"><a class="btn btn--light" href="tel:+79100959623">Позвонить в ателье</a></div>
-        <div class="book__addr">Ковров, ул. Брюсова, 25<br>Пн–Пт 8:00–20:00 · Сб 10:00–16:00 · без обеда</div>
+        <div class="book__addr">Ателье: Ковров, ул. Брюсова, 25<br>Пн–Пт 8:00–20:00 · Сб 10:00–16:00 · время московское</div>
       </div>
       <div class="book__pic rv">
-        <img loading="lazy" src="img/tenderness.webp" width="540" height="810" alt="Свадебное платье «Нежность» со шлейфом">
+        <img loading="lazy" src="/img/tenderness.webp" width="540" height="810" alt="Свадебное платье «Нежность» со шлейфом">
       </div>
     </div>
 
@@ -958,13 +843,11 @@ section[id],.hero{scroll-margin-top:86px}
           <option>Индивидуальный пошив</option>
           <option>Свадебное или выпускное платье</option>
           <option>Корсет</option>
-          <option>Аренда платья</option>
           <option>Платье из коллекции</option>
-          <option>Ремонт и подгонка</option>
           <option>Форма, костюмы, мерч</option>
           <option>Другое</option>
         </select>
-        <textarea class="field full" name="comment" id="comment" placeholder="Расскажите об идее или удобном времени" aria-label="Комментарий"></textarea>
+        <textarea class="field full" name="comment" id="comment" placeholder="Расскажите об идее и как удобнее: по видео или с приездом в Ковров" aria-label="Комментарий"></textarea>
         <div class="form__ok" id="ok"></div>
         <div class="form__foot">
           <button class="btn btn--dark" type="submit">Отправить заявку</button>
@@ -972,30 +855,7 @@ section[id],.hero{scroll-margin-top:86px}
           <small>Заявка откроется в сообщениях ВКонтакте — останется только нажать «Отправить». Или напишите нам в MAX.</small>
         </div>
       </form>
-      <div class="form-card__title">Онлайн-<br>запись<span>Ответим в течение рабочего дня</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ КОНТАКТЫ ============ -->
-<section class="section" data-tone="light" id="contacts" style="padding-top:40px;padding-bottom:0">
-  <div class="wrap">
-    <div class="s-head rv"><h2 class="s-title"><span class="script">К</span>онтакты</h2></div>
-    <div class="contacts">
-      <div class="rv">
-        <div class="c-row"><div class="eyebrow">Адрес</div><div>Ковров, ул. Брюсова, 25</div></div>
-        <div class="c-row"><div class="eyebrow">Режим работы</div><div>Пн–Пт 8:00–20:00<br>Сб 10:00–16:00, без обеда</div></div>
-        <div class="c-row"><div class="eyebrow">Телефон</div><div><a href="tel:+79100959623">+7 (910) 095-96-23</a></div></div>
-        <div class="c-row"><div class="eyebrow">Живёте в Москве?</div><div><a href="/moskva/">Шьём для Москвы по ценам Коврова →</a></div></div>
-        <div class="c-row"><div class="eyebrow">Соцсети</div><div><a href="https://vk.ru/vista33at" target="_blank" rel="noopener">ВКонтакте — vista33at</a></div></div>
-        <div class="c-row">
-          <div class="eyebrow">Мессенджер</div>
-          <div style="margin-top:10px"><a href="https://max.ru/u/f9LHodD0cOJ3ZT5KGQs8Hm811w3w4SDVtHCkBuFcte0fWF-WHnzMIvDi-Fg" target="_blank" rel="noopener" class="btn js-max-btn">Написать в MAX</a></div>
-        </div>
-      </div>
-      <div class="map rv">
-        <iframe src="https://yandex.ru/map-widget/v1/org/vista/88553169327/?z=16" title="ВиСтА на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
-      </div>
+      <div class="form-card__title">Заявка<br>из Москвы<span>Ответим в течение рабочего дня</span></div>
     </div>
   </div>
 </section>
@@ -1004,7 +864,7 @@ section[id],.hero{scroll-margin-top:86px}
 <footer class="foot" data-tone="dark">
   <div class="wrap">
     <div class="foot__brand">
-      <img class="foot__logo" src="img/logo-mono.webp" width="160" height="160" alt="Логотип ателье ВиСтА">
+      <img class="foot__logo" src="/img/logo-mono.webp" width="160" height="160" alt="Логотип ателье ВиСтА">
       <span class="foot__word">ВиСтА</span>
     </div>
     <div class="foot__in">
@@ -1170,7 +1030,7 @@ document.getElementById('form').addEventListener('submit', async e => {
     ok.textContent = 'Пожалуйста, укажите имя и номер телефона полностью.';
     return;
   }
-  const text = `Здравствуйте! Хочу записаться в ателье.\nИмя: ${name}\nТелефон: ${f.phone.value}\nУслуга: ${f.service.value}` +
+  const text = `Здравствуйте! Пишу из Москвы, хочу заказать пошив.\nИмя: ${name}\nТелефон: ${f.phone.value}\nУслуга: ${f.service.value}` +
     (f.comment.value.trim() ? `\nКомментарий: ${f.comment.value.trim()}` : '');
   try { await navigator.clipboard.writeText(text); } catch (_) {}
   window.open('https://vk.me/vista33at', '_blank', 'noopener');
