@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vista33.ru/sitemap.xml
