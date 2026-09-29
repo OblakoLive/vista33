@@ -585,6 +585,7 @@ section[id],.hero{scroll-margin-top:86px}
       <a href="#services">Услуги</a>
       <a href="#prices">Цены</a>
       <a href="#collection">Коллекция</a>
+      <a href="#merch">Мерч</a>
       <a href="#process">Как мы работаем</a>
       <a href="#reviews">Отзывы</a>
       <a href="#contacts">Контакты</a>
@@ -637,6 +638,7 @@ section[id],.hero{scroll-margin-top:86px}
         <div class="hero__cta">
           <a href="#book" class="btn btn--light">Записаться на примерку</a>
           <a href="#collection" class="link-arrow">Смотреть коллекцию →</a>
+          <a href="#merch" class="link-arrow">Мерч Коврова →</a>
         </div>
         <div class="hero__meta">
           <div><b>4,8</b><span>Яндекс Карты</span></div>
@@ -845,6 +847,60 @@ section[id],.hero{scroll-margin-top:86px}
     <div class="looks-foot rv">
       <p>Понравилась модель, но нужен другой цвет или размер? Повторим любое платье из коллекции специально для вас.</p>
       <a class="btn btn--ghost" href="https://vk.ru/market-196755644?section=album_13" target="_blank" rel="noopener">Все платья ВКонтакте →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ МЕРЧ ============ -->
+<section class="section" data-tone="dark" id="merch">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div>
+        <h2 class="s-title"><span class="script">М</span>ерч Коврова</h2>
+        <div class="eyebrow" style="margin-top:14px">Одежда и аксессуары с городским принтом</div>
+      </div>
+    </div>
+    <div class="looks">
+      <article class="look rv">
+        <div class="look__info">
+          <div class="look__name">«Заяц-мотоболист»</div>
+          <div class="look__desc">Футболка-унисекс<br>мотоклуб «Ковров»</div>
+          <div class="look__prices"><b>1 400 ₽</b></div>
+          <a class="look__btn" href="#book" data-service="Форма, костюмы, мерч" data-note="Футболка «Заяц-мотоболист»">Хочу такую</a>
+        </div>
+        <div class="look__img"><img loading="lazy" src="img/merch-tshirt.webp" width="640" height="960" alt="Футболка-унисекс «Заяц-мотоболист»"></div>
+      </article>
+      <article class="look rv">
+        <div class="look__info">
+          <div class="look__name">Шопер «Заяц-мотоболист»</div>
+          <div class="look__desc">Хлопковая сумка-шопер<br>тот же принт, что на футболке</div>
+          <div class="look__prices"><b>1 100 ₽</b></div>
+          <a class="look__btn" href="#book" data-service="Форма, костюмы, мерч" data-note="Шопер «Заяц-мотоболист»">Хочу такую</a>
+        </div>
+        <div class="look__img"><img loading="lazy" src="img/merch-shopper.webp" width="640" height="960" alt="Шопер «Заяц-мотоболист»"></div>
+      </article>
+      <article class="look rv">
+        <div class="look__info">
+          <div class="look__name">«Малые города»</div>
+          <div class="look__desc">Свитшот-унисекс<br>«Страны большие достижения<br>стартуют в малых городах»</div>
+          <div class="look__prices"><b>3 400 ₽</b></div>
+          <a class="look__btn" href="#book" data-service="Форма, костюмы, мерч" data-note="Свитшот «Малые города»">Хочу такой</a>
+        </div>
+        <div class="look__img"><img loading="lazy" src="img/merch-sweatshirt.webp" width="640" height="960" alt="Свитшот-унисекс «Малые города»"></div>
+      </article>
+      <article class="look rv">
+        <div class="look__info">
+          <div class="look__name">«Белокаменный Ковров»</div>
+          <div class="look__desc">Платок<br>церкви Коврова в росписи</div>
+          <div class="look__prices"><b>2 950 ₽</b></div>
+          <a class="look__btn" href="#book" data-service="Форма, костюмы, мерч" data-note="Платок «Белокаменный Ковров»">Хочу такой</a>
+        </div>
+        <div class="look__img"><img loading="lazy" src="img/merch-scarf.webp" width="634" height="948" alt="Платок «Белокаменный Ковров»"></div>
+      </article>
+    </div>
+    <div class="looks-foot rv">
+      <p>Это только часть мерча — футболки, худи, шапки, варежки и другие вещи с видами и символами Коврова.</p>
+      <a class="btn btn--ghost" href="https://vk.ru/market-196755644?section=album_15" target="_blank" rel="noopener">Весь мерч ВКонтакте →</a>
     </div>
   </div>
 </section>
@@ -1144,6 +1200,7 @@ document.querySelectorAll('[data-service]').forEach(b => b.addEventListener('cli
   const opt = [...service.options].find(o => o.text === s);
   if (opt) service.value = s;
   else { service.value = 'Платье из коллекции'; comment.value = 'Интересует: ' + s; }
+  if (b.dataset.note) comment.value = 'Интересует: ' + b.dataset.note; // мерч: у кнопки уже верный service, отдельно подставляем название товара
 }));
 
 // маска телефона
