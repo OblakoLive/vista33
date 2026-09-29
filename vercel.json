@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/:path*", "destination": "https://vista33.ru/:path*", "statusCode": 301 }
+  ]
+}
