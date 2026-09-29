@@ -269,7 +269,12 @@ html[data-theme="day"] .theme-switch__btn[aria-pressed="true"],.nav[data-tone="l
 .hero__meta span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
 
 .hero__visual{position:relative;height:min(78vh,760px);display:flex;justify-content:center}
-.hero__photo{position:relative;width:min(100%,430px);height:100%;border-radius:220px 220px 10px 10px;overflow:hidden;z-index:2;box-shadow:0 40px 80px rgba(0,0,0,.55)}
+/* тёмная тень «поднимает» фото над светлым фоном в «Дне», но на тёмном фоне («Ночь», и шапка в «Миксе» —
+   там она всегда тёмная) та же тень попросту не видна, и фото читается плоским. Добавляем к ней мягкое
+   светлое свечение — на тёмном фоне именно оно и создаёт ощущение объёма; в «Дне» оно не нужно (там уже
+   достаточно тёмной тени) и убирается ниже. */
+.hero__photo{position:relative;width:min(100%,430px);height:100%;border-radius:220px 220px 10px 10px;overflow:hidden;z-index:2;box-shadow:0 40px 80px rgba(0,0,0,.55),0 0 90px 6px rgba(255,244,225,.16)}
+html[data-theme="day"] .hero__photo{box-shadow:0 40px 80px rgba(0,0,0,.55)}
 .hero__photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.85) contrast(1.05);transform:scale(1.22);transform-origin:50% 24%}
 .hero__photo::before{content:"";position:absolute;inset:0 0 auto 0;height:22%;background:linear-gradient(to bottom,var(--ink),transparent);z-index:1;pointer-events:none}
 .hero__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,18,18,.55),transparent 40%)}
