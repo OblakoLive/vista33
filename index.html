@@ -1221,6 +1221,17 @@ phone.addEventListener('input', () => {
   phone.value = r;
 });
 
+// цели Метрики (JavaScript-события): zayavka, tel_admin, tel_viktoria, max, vk
+function goal(id) { try { ym(113132265, 'reachGoal', id); } catch (_) {} }
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href]'); if (!a) return;
+  const h = a.getAttribute('href');
+  if (h.startsWith('tel:+79953131601')) goal('tel_admin');
+  else if (h.startsWith('tel:+79100959623')) goal('tel_viktoria');
+  else if (h.includes('max.ru/')) goal('max');
+  else if (h.includes('vk.ru/') || h.includes('vk.me/') || h.includes('vk.com/')) goal('vk');
+});
+
 // отправка: собираем текст заявки и открываем диалог с сообществом ВКонтакте
 document.getElementById('form').addEventListener('submit', async e => {
   e.preventDefault();
@@ -1233,6 +1244,7 @@ document.getElementById('form').addEventListener('submit', async e => {
   }
   const text = `Здравствуйте! Хочу записаться в ателье.\nИмя: ${name}\nТелефон: ${f.phone.value}\nУслуга: ${f.service.value}` +
     (f.comment.value.trim() ? `\nКомментарий: ${f.comment.value.trim()}` : '');
+  goal('zayavka');
   try { await navigator.clipboard.writeText(text); } catch (_) {}
   window.open('https://vk.me/vista33', '_blank', 'noopener');
   ok.style.display = 'block';
