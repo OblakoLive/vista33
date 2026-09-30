@@ -4,8 +4,24 @@
     {
       "name": "vista-site",
       "runtimeExecutable": "python",
-      "runtimeArgs": [".claude/devserver.py"],
+      "runtimeArgs": [
+        ".claude/devserver.py"
+      ],
       "port": 8420
+    },
+    {
+      "name": "turkovrov-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8421",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "../turkovrov"
+      ],
+      "port": 8421
     }
   ]
 }

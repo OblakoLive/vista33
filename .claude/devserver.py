@@ -23,4 +23,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.send_response(404); self.end_headers()
 
 if __name__ == '__main__':
-    http.server.test(HandlerClass=Handler, port=8420)
+    # без bind= сервер слушал только IPv6 ("::"), а localhost/127.0.0.1 (IPv4) на этой машине
+    # к нему не достукивались — поэтому dev-сервер не открывался. Привязываем явно к IPv4.
+    http.server.test(HandlerClass=Handler, port=8420, bind='127.0.0.1')
